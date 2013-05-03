@@ -1,0 +1,26 @@
+--- mysql-5.5-orig/mysql-test/suite/rpl/t/disabled.orig	2013-05-02 09:17:51.189406425 -0700
++++ mysql-5.5/mysql-test/suite/rpl/t/disabled.def	2013-05-02 09:23:19.144506230 -0700
+@@ -10,6 +10,7 @@
+ #
+ ##############################################################################
+ 
++rpl_auto_increment        : Additional configuration required for wsrep support
+ rpl_row_create_table      : Bug#11759274 2010-02-27 andrei failed different way than earlier with bug#45576
+ rpl_spec_variables        : BUG#11755836 2009-10-27 jasonh rpl_spec_variables fails on PB2 hpux
+ rpl_get_master_version_and_clock : Bug#11766137 Jan 05 2011 joro Valgrind warnings rpl_get_master_version_and_clock
+--- mysql-5.5-orig/mysql-test/suite/innodb/t/disabled.orig	2013-05-02 09:27:35.728673815 -0700
++++ mysql-5.5/mysql-test/suite/innodb/t/disabled.def	2013-05-02 09:28:24.103951843 -0700
+@@ -9,3 +9,5 @@
+ #  Do not use any TAB characters for whitespace.
+ #
+ ##############################################################################
++
++innodb-autoinc             : Additional configuration required for wsrep support
+--- mysql-5.5-orig/mysql-test/t/disabled.orig	2013-05-02 09:30:24.718147231 -0700
++++ mysql-5.5/mysql-test/t/disabled.def	2013-05-02 09:31:12.825430723 -0700
+@@ -17,3 +17,5 @@
+ mysql_embedded           : Bug#12561297 2011-05-14 Anitha Dependent on PB2 changes - eventum#41836
+ partition_rename_longfilename : Fails when building with sbuild and schroots
+ file_contents            : Fails without bzr revision id
++show_check               : Additional configuration required for wsrep support
++information_schema       : Additional configuration required for wsrep support
